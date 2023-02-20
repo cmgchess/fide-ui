@@ -61,7 +61,7 @@ const HomeScreen = () => {
           ALL_OPTION,
           ...data.map((player) => ({
             value: player.id_number,
-            label: player.name,
+            label: `${player.name} (${player.country})`,
             country: player.country,
           })),
         ];
