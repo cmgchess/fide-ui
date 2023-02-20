@@ -136,11 +136,11 @@ const HomeScreen = () => {
                   components={{ Option: FlagOption }}
                 />
               </div>
-              <div className="flex justify-center mt-4">
+              <div className="flex flex-wrap justify-center mt-4 sm:flex-nowrap">
                 <div className="mx-4">{renderDoughnutChart('white')}</div>
                 <div className="mx-4">{renderDoughnutChart('black')}</div>
               </div>
-              <div className="flex justify-center mt-4">
+              <div className="flex flex-wrap justify-center mt-4 sm:flex-nowrap">
                 <div className="mx-4">
                   {renderHalfDoughnutChart('white', 'STANDARD')}
                 </div>
@@ -148,7 +148,7 @@ const HomeScreen = () => {
                   {renderHalfDoughnutChart('black', 'STANDARD')}
                 </div>
               </div>
-              <div className="flex justify-center mt-4">
+              <div className="flex flex-wrap justify-center mt-4 sm:flex-nowrap">
                 <div className="mx-4">
                   {renderHalfDoughnutChart('white', 'RAPID')}
                 </div>
@@ -156,7 +156,7 @@ const HomeScreen = () => {
                   {renderHalfDoughnutChart('black', 'RAPID')}
                 </div>
               </div>
-              <div className="flex justify-center mt-4">
+              <div className="flex flex-wrap justify-center mt-4 sm:flex-nowrap">
                 <div className="mx-4">
                   {renderHalfDoughnutChart('white', 'BLITZ')}
                 </div>
