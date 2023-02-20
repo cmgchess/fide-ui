@@ -1,6 +1,7 @@
 import DoughnutChart from '../components/DoughnutChart';
 import HalfDoughnutChart from '../components/HalfDoughnutChart';
 import Spinner from '../components/Spinner';
+import Footer from '../components/Footer';
 import React, { useState } from 'react';
 import Select, { components } from 'react-select';
 import { getAllStats, getOpponentStats, getPlayers, getPlayerDetails } from '../api';
@@ -166,7 +167,9 @@ const HomeScreen = () => {
             </>
           )}
         </div>
+        <Footer />  
       </div>
+
     </>
   );
 };
