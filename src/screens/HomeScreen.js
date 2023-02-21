@@ -65,7 +65,6 @@ const HomeScreen = () => {
             country: player.country,
           })),
         ];
-        playerOptions.push();
         setOptions(playerOptions);
         setOpponentsLoading(false);
       });
