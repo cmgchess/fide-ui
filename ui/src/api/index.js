@@ -1,13 +1,12 @@
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const getPlayers = async (playerId) => {
   try {
-    const response = await axios.post(
-      'https://fide-rating-production.up.railway.app/player/opponents',
-      {
-        playerId,
-      }
-    );
+    const response = await axios.post(`${API_URL}/player/opponents`, {
+      playerId,
+    });
     return response.data;
   } catch (e) {
     return e.message;
@@ -16,12 +15,9 @@ const getPlayers = async (playerId) => {
 
 const getAllStats = async (playerId) => {
   try {
-    const response = await axios.post(
-      'https://fide-rating-production.up.railway.app/player/stats',
-      {
-        playerId,
-      }
-    );
+    const response = await axios.post(`${API_URL}/player/stats`, {
+      playerId,
+    });
     return response.data;
   } catch (e) {
     return e.message;
@@ -30,13 +26,10 @@ const getAllStats = async (playerId) => {
 
 const getOpponentStats = async (playerId, opponentId) => {
   try {
-    const response = await axios.post(
-      'https://fide-rating-production.up.railway.app/player/opponent-stats',
-      {
-        playerId,
-        opponentId,
-      }
-    );
+    const response = await axios.post(`${API_URL}/player/opponent-stats`, {
+      playerId,
+      opponentId,
+    });
     return response.data;
   } catch (e) {
     return e.message;
@@ -45,12 +38,10 @@ const getOpponentStats = async (playerId, opponentId) => {
 
 const getPlayerDetails = async (playerId) => {
   try {
-    const response = await axios.get(
-      `https://fide-rating-production.up.railway.app/player/${playerId}`
-    );
+    const response = await axios.get(`${API_URL}/player/${playerId}`);
     return response.data;
   } catch (e) {
-    alert(e.message)
+    alert(e.message);
   }
 };
 
