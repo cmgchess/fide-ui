@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios/dist/node/axios.cjs';
 import { getPlayerDetails } from '../../utils/htmlParser';
 
 const handler = async (req, res) => {
