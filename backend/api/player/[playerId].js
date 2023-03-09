@@ -1,4 +1,5 @@
 import axios from 'axios/dist/node/axios.cjs';
+import { allowCors } from '../../middleware/cors';
 import { getPlayerDetails } from '../../utils/htmlParser';
 
 const handler = async (req, res) => {
@@ -17,4 +18,4 @@ const handler = async (req, res) => {
   }
 };
 
-module.exports = handler;
+module.exports = allowCors(handler);
