@@ -1,13 +1,27 @@
 export const allowCors = (fn) => async (req, res) => {
-  // res.setHeader('Access-Control-Allow-Credentials', true)
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  // another common pattern
-  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,POST,PUT');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-  );
+  const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') ?? [];
+
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    // res.setHeader('Access-Control-Allow-Credentials', true)
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    // another common pattern
+    // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+    res.setHeader(
+      'Access-Control-Allow-Methods',
+      process.env.ALLOWED_METHODS ?? 'GET,OPTIONS,PATCH,POST'
+    );
+    res.setHeader(
+      'Access-Control-Allow-Headers',
+      process.env.ALLOWED_HEADERS ??
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+    );
+  } else {
+    res.status(403).end();
+    return;
+  }
+
   if (req.method === 'OPTIONS') {
     res.status(200).end();
     return;
