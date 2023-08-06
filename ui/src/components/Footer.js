@@ -12,7 +12,7 @@ function Footer() {
         >
           <GithubIcon className="w-6 h-6 text-black" />
         </a>
-        <p className="text-black">Github Repository</p>
+        <p className="text-black">GitHub Repository</p>
       </div>
     </footer>
   );
