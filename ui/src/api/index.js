@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_URL;
+const LICHESS_API_URL = 'https://lichess.org/api/fide';
 
 const getPlayers = async (playerId) => {
   try {
@@ -38,7 +39,7 @@ const getOpponentStats = async (playerId, opponentId) => {
 
 const getPlayerDetails = async (playerId) => {
   try {
-    const response = await axios.get(`${API_URL}/player/${playerId}`);
+    const response = await axios.get(`${LICHESS_API_URL}/player/${playerId}`);
     return response.data;
   } catch (e) {
     alert(e.message);
