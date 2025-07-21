@@ -1,7 +1,7 @@
-import DoughnutChart from '../components/DoughnutChart';
-import HalfDoughnutChart from '../components/HalfDoughnutChart';
-import Spinner from '../components/Spinner';
-import Footer from '../components/Footer';
+import DoughnutChart from '../components/DoughnutChart.jsx';
+import HalfDoughnutChart from '../components/HalfDoughnutChart.jsx';
+import Spinner from '../components/Spinner.jsx';
+import Footer from '../components/Footer.jsx';
 import React, { useState } from 'react';
 import Select, { components } from 'react-select';
 import { getAllStats, getOpponentStats, getPlayers, getPlayerDetails } from '../api';
