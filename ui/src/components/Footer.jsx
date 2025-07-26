@@ -1,4 +1,4 @@
-import { ReactComponent as GithubIcon } from '../svg/github-logo.svg';
+import GithubIcon from '../svg/github-logo.svg?react';
 
 function Footer() {
   return (

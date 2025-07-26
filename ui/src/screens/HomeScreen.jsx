@@ -2,9 +2,14 @@ import DoughnutChart from '../components/DoughnutChart';
 import HalfDoughnutChart from '../components/HalfDoughnutChart';
 import Spinner from '../components/Spinner';
 import Footer from '../components/Footer';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Select, { components } from 'react-select';
-import { getAllStats, getOpponentStats, getPlayers, getPlayerDetails } from '../api';
+import {
+  getAllStats,
+  getOpponentStats,
+  getPlayers,
+  getPlayerDetails,
+} from '../api';
 import { typeMap, getAllWLDfromStats, getWLDForTypefromStats } from '../utils';
 const { Option } = components;
 
@@ -166,9 +171,8 @@ const HomeScreen = () => {
             </>
           )}
         </div>
-        <Footer />  
+        <Footer />
       </div>
-
     </>
   );
 };
