@@ -1,4 +1,4 @@
-import githubLogo from '../svg/github-logo.svg';
+import GithubIcon from '../svg/github-logo.svg?react';
 
 function Footer() {
   return (
@@ -10,7 +10,7 @@ function Footer() {
           rel="noopener noreferrer"
           className="mr-2"
         >
-          <img src={githubLogo} alt="GitHub logo" />
+          <GithubIcon className="w-6 h-6 text-black" />
         </a>
         <p className="text-black">GitHub Repository</p>
       </div>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL =  import.meta.env.VITE_API_KEY;
+const API_URL = import.meta.env.VITE_API_URL;
 const LICHESS_API_URL = 'https://lichess.org/api/fide';
 
 const getPlayers = async (playerId) => {

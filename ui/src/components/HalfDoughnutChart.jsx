@@ -4,8 +4,9 @@ import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const HalfDoughnutChart = ({ title, dataPoints }) => {
-
-  const total = dataPoints.reduce((previousValue, currentValue) => previousValue + currentValue);
+  const total = dataPoints.reduce(
+    (previousValue, currentValue) => previousValue + currentValue
+  );
 
   const options = {
     rotation: -90,
@@ -24,7 +25,7 @@ const HalfDoughnutChart = ({ title, dataPoints }) => {
       },
     },
   };
-  
+
   const data = {
     labels: ['Win', 'Draw', 'Loss'],
     datasets: [
