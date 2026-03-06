@@ -7,7 +7,7 @@ const handler = async (req, res) => {
   }
   try {
     const { playerId } = req.body;
-    const URL = `http://ratings.fide.com/a_data_stats.php?id1=${playerId}&id2=0`;
+    const URL = `https://ratings.fide.com/a_data_stats.php?id1=${playerId}&id2=0`;
 
     const headers = { 'X-Requested-With': 'XMLHttpRequest' };
 
