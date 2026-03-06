@@ -7,7 +7,7 @@ const handler = async (req, res) => {
   }
   try {
     const { playerId } = req.body;
-    const URL = `http://ratings.fide.com/a_data_opponents.php?pl=${playerId}`;
+    const URL = `https://ratings.fide.com/a_data_opponents.php?pl=${playerId}`;
 
     const response = await axios.get(URL);
     const data = response.data;
