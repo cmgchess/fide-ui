@@ -9,7 +9,10 @@ const handler = async (req, res) => {
     const { playerId } = req.body;
     const URL = `https://ratings.fide.com/a_data_stats.php?id1=${playerId}&id2=0`;
 
-    const headers = { 'X-Requested-With': 'XMLHttpRequest' };
+    const headers = {
+      'X-Requested-With': 'XMLHttpRequest',
+      'Host': 'ratings.fide.com'
+    };
 
     const response = await axios.post(URL, null, {
       headers,
